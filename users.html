@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Wojciech Mruk">
+    <title>CMS Admin</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="https://cdn.ckeditor.com/4.9.2/standard/ckeditor.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md">
+      <div class="container">
+      <a class="navbar-brand" href="#">CMS Admin</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Dashboard <span class="sr-only">(current)</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="pages.html">Pages</a></li>
+          <li class="nav-item"><a class="nav-link" href="posts.html">Posts</a></li>
+          <li class="nav-item active"><a class="nav-link" href="users.html">Users</a></li>
+        </ul>
+        <ul class="navbar-nav navbar-right">
+          <li class="nav-item"><a class="nav-link" href="#">Hi, Wojciech</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+    </nav>
+
+    <header id="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10">
+            <h1><i class="fas fa-cogs"></i> Users<small> Manage users</small></h1>
+          </div>
+          <div class="col-md-2">
+            <div class="dropdown create">
+              <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               Create Content
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+
+                <a class="dropdown-item" data-toggle="modal" data-target="#addPage" type="button">Add Page</a>
+                <a class="dropdown-item" href="#">Add Post</a>
+                <a class="dropdown-item" href="#">Add User</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section id="breadcrumb">
+        <div class="container">
+          <ol class="breadcrumb">
+            <li><a href="index.html">Dashboard</a></li>
+            <li class="active">Users</li>
+          </ol>
+        </div>
+    </section>
+    <section id="main">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="list-group">
+              <a href="index.html" class="list-group-item list-group-item-action main-color-bg">
+               <i class="fas fa-cogs"></i> Dashboard
+              </a>
+            <div class="card card-body text-center" >
+              <h5>Wojciech</h5>
+              <img src="img/avatar.jpg" class="img-thumbnail rounded-circle" alt="user"  >
+            </div>   
+              <a href="pages.html" class="list-group-item list-group-item-action"><i class="fas fa-file-alt"></i> Pages <span class="badge badge-info">4</span></a>
+              <a href="posts.html" class="list-group-item list-group-item-action"><i class="fas fa-edit"></i> Posts <span class="badge badge-info">12</span></a>
+              <a href="users.html" class="list-group-item list-group-item-action"><i class="fas fa-user"></i> Users <span class="badge badge-info">18</span></a>
+            </div>
+           </div>
+          <div class="col-md-9">
+            <div class="card">
+              <div class="card-header main-color-bg">Manage pages</div>
+              
+                <div class="card-body">
+                 <div class="row">
+                    <div class="col">
+                      <input class="form-control" type="text" placeholder="Filter ..."></input>
+                    </div>
+                 </div>
+                 <br>
+
+               <div class="table-responsive">
+                <table class="table table-striped table-sm">
+                  <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>First Name</th>
+                      <th>Last Name</th>
+                      <th>Created</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>Tomas</td>
+                      <td>Doe</td>
+                      <td>2018-01-01</td>
+                      <td><a href="edit.html" class="btn btn-info">Edit</a><a href="#" class="btn btn-danger">Delete</a></td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>Timmy</td>
+                      <td>Does</td>
+                      <td>2018-02-05</td>
+                      <td><a href="edit.html" class="btn btn-info">Edit</a><a href="#" class="btn btn-danger">Delete</a></td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>Rafon</td>
+                      <td>Rex</td>
+                      <td>2018-02-03</td>
+                      <td><a href="edit.html" class="btn btn-info">Edit</a><a href="#" class="btn btn-danger">Delete</a></td>
+                    </tr>
+     
+                  </tbody>
+                </table>
+             </div>
+
+
+                </div> <!-- end of the card body -->
+            
+            </div> 
+
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <!-- modals -->
+<div class="modal fade" id="addPage" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <form>
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Add Page</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label>Page Title</label>
+            <input type="text" class="form-control" placeholder="Page Title" name="page-title">
+          </div>
+          <div class="form-group">
+            <label>Page Body</label>
+            <textarea type="text" class="form-control" placeholder="Page Body" name="editor1"> </textarea>
+          </div>
+          <div class="checkbox">
+            <label><input type="checkbox"> Published</label>
+          </div>
+          <div class="form-group">
+            <label>Tags</label>
+            <input type="text" class="form-control" placeholder="Add some tags" name="tags">
+          </div>
+          <div class="form-group">
+            <label>Meta Description</label>
+            <input type="text" class="form-control" placeholder="Add some Meta description" name="meta">
+          </div>
+        </div> <!-- modal body end-->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<footer id="footer">
+  <p>Copyright Wojciech Mruk</p>
+</footer>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
